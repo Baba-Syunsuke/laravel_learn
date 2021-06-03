@@ -22,5 +22,5 @@ class PostController extends Controller
             -> with(['post' =>$this->posts[$id]]);
     }
     // viewってつまりhtmlファイルにアクセスする関数で、
-    // パブリックとプライベートを分離するためにある
+    // パブリックとプライベートを分離するためにある。
 }

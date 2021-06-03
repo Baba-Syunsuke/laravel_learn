@@ -1,15 +1,10 @@
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <title> MyBBS </title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>{{ $post }}</h1>
-    </div>
-    
-</body>
-</html>
+<x-layout>
+    <x-slot name="title">
+        {{ $post }}-MyBBS
+    </x-slot>
+    <h1>{{ $post }}</h1>
+        <div class="back-link">
+            &laquo;<a href={{ route('posts.index') }}>Back</a>
+        </div>
+</x-layout>
