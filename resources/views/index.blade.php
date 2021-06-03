@@ -4,11 +4,11 @@
     </x-slot>
     <h1>My BBS</h1>
     <ul>
-        @forelse ($posts as $index => $post)
+        @forelse ($posts as $post)
 
             <li>
-                <a href ="{{ route('posts.show',$loop->index) }}">
-                    {{ $post }}
+                <a href ="{{ route('posts.show',$post) }}">
+                    {{ $post->title }}
                 </a>
         @empty
             <li>No posts yet!</li>
