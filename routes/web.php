@@ -30,4 +30,5 @@ Route::get('/posts/{post}/edit',[PostController::class,'edit'])
         bbbbbbbbbbbbbbbbbbb
 Route::patch('/posts/{post}/update',[PostController::class,'edit'])
         ->name('posts.update')
+        aaaaaaaaaaaaaaa
         ->where('post','[0-9]+');
