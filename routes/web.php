@@ -31,3 +31,5 @@ Route::patch('/posts/{post}/update',[PostController::class,'edit'])
         ->name('posts.update')
 
         ->where('post','[0-9]+');
+        // 一部の形式aaaaaaaaaaaaaaaagir
+        aaaaaaaaaaaaaaaaa
