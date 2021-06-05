@@ -32,4 +32,4 @@ Route::patch('/posts/{post}/update',[PostController::class,'edit'])
 
         ->where('post','[0-9]+');
         // 一部の形式aaaaaaaaaaaaaaaagir
-        aaaaaaaaaaaaaaaaa
+        aaaaaaaaaaaaaaaaafghjklmdsakmkm
