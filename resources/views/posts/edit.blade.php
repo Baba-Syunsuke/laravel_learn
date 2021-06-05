@@ -11,6 +11,8 @@
         </div>
         <form method="post" action=" {{ route('posts.update',$post) }}">
             @method('PATCH')
+
+            aaaaaaaaaaaaaaaaaa
             @csrf
             <div class="form-group">
                 <label>
