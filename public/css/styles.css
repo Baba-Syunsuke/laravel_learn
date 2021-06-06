@@ -16,6 +16,9 @@ li {
     line-height:1.6;
     margin-bottom:8px;
 }
+a {
+    text-decoration: none;
+}
 .container
 {
     width:480px;
@@ -61,3 +64,12 @@ button{
     margin-top: 8px;
 }
 
+.btn{
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+    color: blue;
+    vertical-align: 1px;
+}

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
-
+use App\Http\Requests\PostRequest;
 class PostController extends Controller
 {
     public function index ()
@@ -28,19 +28,8 @@ class PostController extends Controller
         return view('posts.create');
     }
 
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
-        $request -> validate([
-            'title' =>'required|min:3',
-            'body' =>'required',
-        ],
-        [
-            'title.required' =>'タイトルは必須です',
-            'title.min' => ':min文字以上入力してください',
-            'body.required' =>'ボディは入力必須です、',
-        ],
-
-        );
         $post = new Post();
 
         $post->title = $request->title;
@@ -57,6 +46,26 @@ class PostController extends Controller
 
         return view('posts.edit')
             -> with(['post' => $post]);
+    }
+
+    //ModelからPostを作成
+    //requestはformに埋め込まれた値
+    public function update(PostRequest $request,Post $post)
+    {
+
+        $post->title = $request->title;
+        $post->body = $request->body;
+
+        $post->save();
+
+        return redirect()
+            ->route('posts.show',$post);
+    }
+    public function destroy (Post $post)
+    {
+        $post->delete();
+
+        return redirect() ->route('posts.index');
     }
 
 }

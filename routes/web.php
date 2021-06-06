@@ -25,7 +25,16 @@ Route::post('/posts/store',[PostController::class,'store'])
 Route::get('/posts/{post}/edit',[PostController::class,'edit'])
         ->name('posts.edit')
         ->where('post','[0-9]+');
-Route::patch('/posts/{post}/update',[PostController::class,'edit'])
+Route::patch('/posts/{post}/update',[PostController::class,'update'])
         ->name('posts.update')
         ->where('post','[0-9]+');
-        // 一部の形式
+
+Route::delete('/posts/{post}/destroy',[PostController::class,'destroy'])
+        ->name('posts.destroy')
+        ->where('post','[0-9]+');
+
+
+
+
+
+
